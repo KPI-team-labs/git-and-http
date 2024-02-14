@@ -28,7 +28,7 @@ func getCurrentTime() string {
 func main() {
 	http.HandleFunc("/time", serverHandler)
 
-	port := 8000
+	port := 8795
 	println("Server is running on port:", fmt.Sprint(port))
 	err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
 	if err != nil {
