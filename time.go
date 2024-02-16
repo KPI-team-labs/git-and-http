@@ -7,16 +7,10 @@ import (
 	"time"
 )
 
-func serverHandler(writer http.ResponseWriter, request *http.Request) {
+func serverHandler(writer http.ResponseWriter, response *http.Request) {
 	writer.Header().Set("Content-Type", "application/json")
-
-	if request.Method != http.MethodGet {
-		http.Error(writer, "Method Not Allowed", http.StatusMethodNotAllowed)
-		return
-	}
-
 	currentTime := getCurrentTime()
-	resp := map[string]string{"time": currentTime}
+	resp := map[string]string{"currentTime": currentTime}
 	ResponseInJson, err := json.Marshal(resp)
 	if err != nil {
 		http.Error(writer, "Internal Server Error", http.StatusInternalServerError)
