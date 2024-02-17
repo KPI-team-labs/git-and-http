@@ -1,5 +1,5 @@
 # Lab 1 - Git and HTTP
-## Group: IM-12
+## Group: IM-22
 ### First Lab on Software Engineering Components
 
 ---
